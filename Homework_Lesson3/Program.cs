@@ -9,6 +9,18 @@
 // if (numbers[0] == numbers[4] && numbers[1] == numbers[3]) Console.WriteLine(numbers + " -> да");
 // else Console.WriteLine(numbers + " -> нет");
 
+// та же задача только с деление и остатками
+// Console.Write("Введите 5-ти значное число, проверим, является ли полиндромом: ");
+// int n = Convert.ToInt32(Console.ReadLine());
+// if (n / 10000 == n % 10 && (n / 1000) % 10 == (n % 100) / 10) Console.WriteLine($"{n} -> да");
+// else Console.WriteLine($"{n} -> нет");
+// Console.WriteLine(n / 10000);
+// Console.WriteLine(n % 10);
+// Console.WriteLine((n / 1000) % 10);
+// Console.WriteLine((n % 100) / 10);
+
+
+
 
 // Задача 21 Напишите программу, которая принимает на вход координаты
 // двух точек и находит расстояние между ними в 3D пространстве.
