@@ -15,7 +15,31 @@
 //     if (array[i] % 2 == 0) evenNumbers++;
 // }
 // Console.WriteLine($"Массив: [{string.Join(",", array)}] -> {evenNumbers}");
+// попытка метода
+// Console.Write("Введите количество элементов в массиве: ");
+// int arrayLength = Convert.ToInt32(Console.ReadLine());
+// int[] array = RandomArray(arrayLength);
+// Console.WriteLine($"Массив: [{string.Join(",", array)}] -> {EvenNumbersArray(array)}");
 
+// int EvenNumbersArray(int[] array)
+// {
+//     int evenNumbers = 0;
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         if (array[i] % 2 == 0) evenNumbers++;
+//     }
+//     return evenNumbers;
+// }
+
+// int[] RandomArray(int arrayLength)
+// {
+//     int[] array = new int[arrayLength];
+//     for (int i = 0; i < arrayLength; i++)
+//     {
+//         array[i] = new Random().Next(100, 1000);
+//     }
+//     return array;
+// }
 
 // Задача 36: Задайте одномерный массив, заполненный случайными числами.
 // Найдите сумму элементов, стоящих на нечётных позициях.
