@@ -246,33 +246,38 @@
 // 11 16 15 6
 // // 10 9 8 7
 // Console.Clear();
-// int rows = 4;
-// int columns=4;
+// int rows = 10;
+// int columns = 10;
 // int[,] matrix = new int[rows, columns];
-// int count=1;
-
-
-// for (int j = 0; j < columns-1; j++)
+// int count = 1;
+// int indexRow = 0;
+// int indexColumns = 0;
+// while (count < rows * columns)
 // {
-//     matrix[0,j]=count++;
+//     do
+//     {
+//         matrix[indexRow, indexColumns++] = count++;
+//     }
+//     while (indexColumns + 1 < columns && matrix[indexRow, indexColumns + 1] == 0);
+
+//     do
+//     {
+//         matrix[indexRow++, indexColumns] = count++;
+//     }
+//     while (indexRow + 1 < rows && matrix[indexRow + 1, indexColumns] == 0);
+
+//     do
+//     {
+//         matrix[indexRow, indexColumns--] = count++;
+//     }
+//     while (indexColumns > 0 && matrix[indexRow, indexColumns - 1] == 0);
+
+//     do
+//     {
+//         matrix[indexRow--, indexColumns] = count++;
+//     }
+//     while (indexRow > 0 && matrix[indexRow - 1, indexColumns] == 0);
 // }
-
-// for (int i = 0; i < rows-1; i++)
-// {
-//     matrix[i,rows-1]=count++;
-// }
-
-// for (int j = columns-1; j >= 0; j--)
-// {
-//     matrix[rows-1,j]=count++;
-// }
-
-// for (int i = rows-1; i >= 0; i--)
-// {
-//     matrix[i,rows-1]=count++;
-// }
-
-
 
 // for (int i = 0; i < rows; i++)
 // {
@@ -284,5 +289,33 @@
 // }
 
 
-// Задача 61: Вевести первые строки N строк треугольника Паскаля. Сделать вывод в
+
+
+// Задача 61: Вывести первые строки N строк треугольника Паскаля. Сделать вывод в
 // виде равнобедренного треугольника.
+// Console.Clear();
+// Console.Write("Введите количество строк для треугольника паскаля: ");
+// int count = Convert.ToInt32(Console.ReadLine());
+// int nFactorial = 1;
+// int kFactorial = 1;
+// int nkFactorial = 1;
+// string space = string.Empty;
+
+// for (int n = 0; n < count; n++)
+// {
+//     Console.Write(space.PadLeft(40 + count - 5 * n));
+//     nFactorial *= n;
+//     if (n == 0) nFactorial = 1;
+//     for (int k = 0; k <= n; k++)
+//     {
+//         kFactorial *= k;
+//         if (k == 0) kFactorial = 1;
+//         for (int fact = 0; fact <= n - k; fact++)
+//         {
+//             nkFactorial *= fact;
+//             if (fact == 0) nkFactorial = 1;
+//         }
+//         Console.Write($"{space.PadRight('\t')}{nFactorial / (kFactorial * nkFactorial)}");
+//     }
+//     Console.WriteLine();
+// }
